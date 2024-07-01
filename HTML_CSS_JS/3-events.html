@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.13/index.global.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@6.1.13/index.global.min.js'></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        let popup = document.querySelector('dialog');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth',
+          googleCalendarApiKey: 'AIzaSyAt475GPNGkb18b-LdXLog5EUZ0Up4MODY',
+          events: {
+            googleCalendarId: '9b215ad74cf07bafa0c3fc6319546a70216f841768785182b88fc1463d9a14d9@group.calendar.google.com'
+          },
+          eventClick: function(info) {
+          info.jsEvent.preventDefault();
+          popup.querySelector('div').innerHTML = `
+          <h2>${info.event.title}</h2>
+          <div><p><br></p></div>
+          <div>
+          <div>${info.event.end.toDateString().toLocaleString(
+            "en-US", {timezone:"America/Los_Angeles"}
+          )}
+          ${info.event.start.toTimeString()}
+          <p><br></p>
+          ${info.event.extendedProps.description}
+          <p><br></p></div>
+          `;
+          popup.setAttribute('open', 'open');
+          }
+        });
+        
+        calendar.render();
+        popup.querySelector('button').addEventListener('click', ()=>
+        {
+          popup.removeAttribute('open');
+        });
+      });
+
+    </script>
+     <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="top-bar menu-min-width">
+      <!-- Logo -->
+  
+      <div class="menu">
+        <div id="logo">
+            <!-- Menu  -->
+            <a href="mainpage.html">
+              <img class="logo-img" src="../Images/logo.png" style="width:7%; height:7%">
+            </a>
+            
+            <!-- Menu End -->
+        </div>
+        <nav class="top-bar__menu-box justify-content-between">
+          <ul>
+            <li>
+              <a href="1-aboutus.html">About</a>
+              <ul class="submenu">
+                <li><a href="1-aboutus.html">About Us</a></li>
+                <li><a href="1-leadership.html">Leadership</a></li>
+                <li><a href="1-history.html">History</a></li>
+                <li><a href="1-ourcovering.html">Our Covering</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="2-innerhealing.html">Ministries</a>
+              <ul class="submenu">
+                <li><a href="2-innerhealing.html">Inner Healing</a></li>
+                <li class="long"><a href="2-intercessoryprayer.html">Intercessory Prayer</a></li>
+                <li><a href="2-worship.html">Worship</a></li>
+              </ul>
+            </li>
+          <li>
+            <a href="3-contactus.html">Plan a Visit</a>
+            <ul class="submenu">
+              <li><a href="3-contactus.html">Contact Us</a></li>
+              <li><a href="3-events.html">Events</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="give.html">Give</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="event-message">
+      <p>Welcome</p>
+      <p>Please join an event and</p>
+    </div>
+
+    <div id="container">
+      <div id='calendar'>
+      </div>
+    </div>
+    
+    <dialog>
+      <div>Title Test</div>
+      <button>close</button>
+    </dialog>
+
+    <section id="bottom">
+      <div id="footer-wrapper">
+      <div>
+        <p class="footer-header">Unravel Church<br></p>
+        <p class="footer-body">5883 Eden Park Pl, San Jose, CA 95138
+        Rear Entrance of Gateway City Church<br><br>
+        Instagram:
+        <a href="https://www.instagram.com/unravelchurch/" target="_blank">@unravelchurch</a><br><br><br>
+      </p>
+    </div>
+  </div>
+  <footer></footer>
+
+  </body>
+</html>

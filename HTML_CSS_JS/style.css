@@ -1,0 +1,1385 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand';
+  list-style: none;
+}
+
+#div{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+img{
+  width:100vw;
+}
+
+/* PC 1024px*/ 
+header{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  background-color: rgb(236, 236, 236);
+}
+
+#logo{
+  position:absolute;
+  margin-left: 0px;
+  width: 100%;
+  max-width: 800px;
+  float: left;
+}
+
+.menu{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top-bar__menu-box > ul{
+  padding: 0;
+  margin: 0 auto;
+  width: auto;
+}
+.top-bar__menu-box > ul >li{
+  display: inline-block;
+  position: relative;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.top-bar__menu-box > ul > li > a{
+  font-size: 1.5rem;
+  padding: 15px 20px;
+  border: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar__menu-box{
+  text-align: center;
+  margin-top: 0px;
+  font-size: 2rem;
+  float: right;
+}
+
+.submenu{
+  background-color: rgb(236, 236, 236, 0.8);
+  color: black;
+  line-height: 30px;
+}
+
+.long{
+  line-height: 15px;
+}
+
+.top-bar__menu-box > ul ul{
+  display:none;
+}
+
+.top-bar__menu-box ul > li:hover > a{
+  color: rgb(169, 186, 157);
+  padding: auto;
+}
+
+.top-bar__menu-box > ul > li:hover > ul{
+  display: block;
+}
+
+.top-bar__menu-box > ul > li > ul{
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+}
+
+/* slide bar */
+.slider{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background: white;
+  margin-left:0;
+}
+
+.main-slider{
+  margin-top:0;
+}
+
+.prev, .next{
+  position: absolute;
+  top: 35%;
+  transform: translate(0, -50%);
+  font-size: 50px;
+  padding: 50px;
+  cursor: pointer;
+  color: #95989b;
+  transition: 0.1s;
+  user-select: none;
+}
+
+.next{
+  right: 0;
+}
+
+.prev:hover, .next:hover{
+  color: #fff;
+}
+
+
+
+
+.fade{
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+
+.description{
+  position: absolute;
+  color: #fff;
+  letter-spacing: 3px;
+  /* font position */
+  font-size:4vw;
+  top: 50%;
+  left: 4%;
+}
+
+.description-header
+{
+  font-size: 40px;
+  text-align: left;
+  font-family: 'roboto'
+}
+
+.description-inline
+{
+  font-size: 20px;
+  text-align: left;
+  font-family: 'roboto';
+}
+
+.sunday-service{
+  display:flexbox;
+  color:#95989b;
+  font-family: 'roboto';
+  text-align: center;
+  width:1000px;
+  font-size: 20px;
+  margin:auto;
+}
+
+.sunday-service1{
+  font-weight: lighter;
+}
+
+.sunday-service2{
+  font-weight: bold;
+  font-size: 60px;
+  line-height:2;
+}
+
+.sunday-service4{
+  text-decoration: underline;
+}
+
+.sunday-service-button{
+  margin:2em 1em 1em 1em;
+  background-color: white;
+  border-radius: 40px;
+  border-color: #95989b;
+  padding: 1em 5em;
+  font-size:20px;
+  color:#95989b;
+  transition: 0.3s ease-in-out;
+  border-style: solid;
+}
+
+.sunday-service-button:hover{
+  border-color: rgb(122, 134, 113);
+  background-color: rgb(169, 186, 157);
+  color:white;
+}
+
+.sunday-service-box{
+  padding: 1em 0em;
+  margin: 10em 10em;
+  border: solid;
+  border-width: 1px 1px;
+}
+
+.main-pastor{
+  display: flex;
+  position: relative;
+  margin-bottom: 0;
+  height: 70vh;
+  width: 99vw;
+  overflow:hidden;
+  margin-left:0;
+}
+
+.about-pastors{
+  z-index:1;
+  color: white;
+  font-size: 25px;
+  top: 10%;
+  left: 5%;
+  position: absolute;
+}
+
+.pastor-button{
+  margin-top: 50px;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius:20px;
+  border-color: white;
+  font-size:20px;
+  color: white;
+  padding: 2%;
+}
+
+#footer-wrapper{
+  margin-top:0;
+  height: auto;
+  max-height: calc(100vh - 6rem);
+  background-color: #e7e7e7;
+  display:flex;
+}
+
+.footer{
+  height: 6rem;
+  position: relative;
+  transform: translateY(-100%);
+}
+
+.footer-header{
+  font-size: 30px;
+  font-weight: 800;
+  color: #686a6b;
+  font-family: 'roboto';
+  margin-left: 150px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.footer-body{
+  margin-left: 150px;
+  color: #686a6b;
+  font-family: 'roboto';
+}
+
+/* mainpage end */
+
+/* top-box */
+.top-box{
+  position: relative;
+  display: block;
+}
+.top-title{
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+/* 1-aboutus */
+
+.network-1{
+  margin-top: 150px;
+  font-size: 40px;
+  color:#5a5a5a;
+  text-align: center;
+  font-weight: bold;
+}
+
+.network-2{
+  font-size:20px;
+  text-align: center;
+  color: #5a5a5a;
+}
+
+.network-3{
+  margin-top: 40px;
+  font-size:25px;
+  text-align: center;
+  color: #5a5a5a;
+}
+
+.network-line{
+  width: 120px;
+  margin: auto;
+}
+
+.network-button{
+  border-radius: 30px;
+  border-color: #5a5a5a;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 10px 50px;
+  position: absolute;
+  left: 50%;
+  margin-top: 70px;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: #5a5a5a;
+}
+
+.network-button:hover{
+  background-color: #d4d4d4;
+  color: white;
+}
+
+.church-title{
+  font-family: 'times new roman';
+  text-align: center;
+  font-size: 40px;
+  color: #5a5a5a;
+  margin-top: 250px;
+  font-weight: bold;
+}
+
+.church-desc1{
+  margin-top: 40px;
+  text-align: center;
+  color: #5a5a5a;
+  font-size: 25px;
+}
+
+.church-desc2{
+  margin-top: 40px;
+  text-align: center;
+  color: #5a5a5a;
+  font-size: 25px;
+}
+
+.church-desc3{
+  margin-top: 60px;
+  color: #5a5a5a;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.church-desc4{
+  margin-top: 30px;
+  color: #5a5a5a;
+  text-align: center;
+  font-size: 25px;
+}
+
+.church-desc5{
+  margin-top: 40px;
+  text-align: center;
+  color: #5a5a5a;
+  font-size: 25px;
+  margin-bottom: 200px;
+}
+
+.church-desc-button{
+  border-radius: 30px;
+  border-color: #5a5a5a;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 10px 50px;
+  position: absolute;
+  left: 50%;
+  margin-top: -130px;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: #5a5a5a;
+  margin-bottom: 200px;
+}
+
+.church-desc-button:hover{
+  background-color: #d4d4d4;
+  color: white;
+  margin-bottom: 100px;
+}
+
+
+/* 1-History */
+
+.slider-1{
+  position: absolute;
+  color: #fff;
+  letter-spacing: 3px;
+  /* font position */
+  font-size:4vw;
+  top: 80%;
+  left: 4%;
+}
+.slider-1-header{
+  font-size: 40px;
+  text-align: left;
+  font-family: 'roboto'
+}
+
+.slider-1-inline{
+  font-size: 20px;
+  text-align: left;
+  font-family: 'roboto';
+}
+
+/* 1-our covering */
+
+.eacm{
+  position: relative;
+}
+
+.eacm-1{
+  font-family: 'times new roman';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  text-align: center;
+  color: white;
+}
+
+.eacm-2{
+  font-family: 'times new roman';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  text-align: center;
+  color: white;
+}
+
+.eacm-button{
+  border-radius: 30px;
+  border-color: white;
+  background-color: transparent;
+  padding: 10px 50px;
+  position: absolute;
+  left: 50%;
+  bottom: -20%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: white;
+  margin-bottom: 180px;
+}
+
+.eacm-button:hover{
+
+  background-color: #d4d4d4;
+  color: white;
+  margin-bottom: 180px;
+}
+
+.sim-button{
+  border-radius: 30px;
+  border-color: white;
+  background-color: transparent;
+  padding: 10px 50px;
+  position: absolute;
+  left: 50%;
+  bottom: -20%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: white;
+  margin-bottom: 180px;
+}
+
+.sim-button:hover{
+
+  background-color: #d4d4d4;
+  color: white;
+  margin-bottom: 180px;
+}
+
+.so-button{
+  border-radius: 30px;
+  border-color: white;
+  background-color: transparent;
+  padding: 10px 50px;
+  position: absolute;
+  left: 50%;
+  bottom: -20%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: white;
+  margin-bottom: 180px;
+}
+
+.so-button:hover{
+  background-color: #d4d4d4;
+  color: white;
+  margin-bottom: 180px;
+}
+
+/* 2-Inner Healing */
+
+.inner-header{
+  font-family:'Times New Roman';
+  margin-top: 150px;
+  font-size: 40px;
+  color:#5a5a5a;
+  text-align: center;
+  font-weight: bold;
+}
+
+.inner-sentence{
+  font-family:'Times New Roman';
+  font-size:25px;
+  text-align: center;
+  color: #5a5a5a;
+  line-height: 35px;
+}
+
+.biblical-header{
+  font-family:'Times New Roman';
+  margin-top: 150px;
+  font-size: 40px;
+  color:#5a5a5a;
+  text-align: center;
+  font-weight: bold;
+}
+
+.biblical-sentence{
+  font-family:'Times New Roman';
+  font-size:25px;
+  text-align: center;
+  color: #5a5a5a;
+  line-height: 35px;
+}
+
+.biblical-sentence2{
+  font-family:'Times New Roman';
+  font-size:25px;
+  text-align: center;
+  color: #5a5a5a;
+  line-height: 35px;
+}
+
+.biblical-sentence3{
+  font-family:'Times New Roman';
+  margin-top: 40px;
+  text-align: center;
+  color: #5a5a5a;
+  font-size: 25px;
+}
+
+.biblical-sentence4{
+  font-family:'Times New Roman';
+  font-size:25px;
+  text-align: center;
+  color: #5a5a5a;
+  line-height: 35px;
+  margin-bottom: 100px;
+}
+
+/* 2-Intercessory Prayer */
+.int-img{
+  display:block;
+  margin: 0 auto;
+}
+
+.int-text{
+  font-family:'Times New Roman';
+  text-align: center;
+  font-size: 20px;
+  margin-top:30px;
+}
+
+.int-line{
+  width: 1200px;
+  margin:auto;
+  margin-top:30px;
+}
+
+.int-b{
+  margin-top: 50px;
+  margin-left: 350px;
+  margin-bottom: 50px;
+}
+
+.int-title{
+  font-family:'Times New Roman';
+  font-size: 25px;
+}
+
+.int-body{
+  font-family:'Times New Roman';
+  font-size: 20px;
+  line-height: 35px;
+}
+
+/* 3-Events */
+dialog{
+  position: fixed;
+  width: 300px;
+  z-index: 100;
+  padding: 30px;
+  background: #fff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  border: none;
+  border-radius: 10px;
+}
+
+#container{
+  width: 900px;
+  margin:auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.event-message{
+  margin-top: 150px;
+}
+
+/* 1-leadership */
+
+
+.leadership{
+  margin: auto;
+  display: flex;
+  margin-bottom: 200px;
+  max-width: 90%;
+  justify-content: center;
+  align-items: center;
+}
+
+.leadership img{
+  width: 80%;
+  height: 300px;
+  border-radius: 50%;
+  margin-left:30px;
+}
+
+.pastors{
+  margin: 50px;
+  box-sizing: border-box;
+  padding:0;
+}
+
+.reverends{
+  margin: 50px;
+  box-sizing: border-box;
+  padding:0;
+  justify-content: center;
+}
+
+.ministers{
+  margin: 50px;
+  box-sizing: border-box;
+  padding:0;
+}
+
+.staffs{
+  font-size: 40px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.leadership-p{
+  font-size: 30px;
+  text-align: center;
+}
+
+.l-divider{
+  width: 300px;
+  margin:auto;
+}
+
+/* 3-contact us */
+.contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 50vw;
+  max-height: 50vh;
+  box-shadow: 0.2rem .5rem rgba(168, 168, 168, 0.4);
+  margin:auto;
+  background-color: white;
+  border-radius: 1rem;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.map, .form{
+  box-sizing: border-box;
+  width:50%;
+  height:100%;
+}
+
+.map iframe{
+  width: 100%;
+  height: 100%;
+}
+
+.form{
+  background-color: rgb(169, 186, 157);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.form::before{
+  position: absolute;
+  top: 10%;
+  left: -2.6rem;
+  content: "";
+  width:0;
+  height:0;
+  border: 1.4rem solid transparent;
+  border-right: 1.4rem solid rgb(169, 186, 157);
+}
+
+.form h1{
+  font: 500 1.8rem sans-serif;
+  padding: 0.4rem;
+  padding-left: 2.5rem;
+  color: white;
+}
+
+.form form{
+  padding: 0.4rem;
+  padding-left: 2.5rem;
+}
+
+.form input, .form textarea{
+  width: 80%;
+  padding: 1rem;
+  border: 0.15rem solid white;
+  border-radius: 2rem;
+  background-color: unset;
+  font-size:1rem;
+  outline:none;
+  color: white;
+}
+
+.form input:not(:first-child), .form textarea, .form button{
+  margin-top: .8rem;
+}
+
+.form textarea{
+  height: 6rem;
+  resize: none;
+}
+
+.form button{
+  background-color: white;
+  padding: 1rem 2rem;
+  color: rgb(169, 186, 157);
+  border-radius: 2rem;
+  border:none;
+  font-size: 1rem;
+}
+
+
+/* Tablet L:768px ~ P:1023px*/ 
+@media all and (min-width:768px) and (max-width:1380px) {
+  /* slide bar */
+
+  .prev, .next{
+    top: 40%;
+    padding: 20px;
+  }
+  
+  .description{
+    top: 50%;
+  }
+  
+  .sunday-service{
+    display:flexbox;
+    color:#95989b;
+    font-family: 'roboto';
+    text-align: center;
+    width:820px;
+    font-size: 20px;
+    margin: auto;
+  }
+  
+  .sunday-service2{
+    font-weight: bold;
+    font-size: 40px;
+    line-height:2;
+  }
+  
+  
+  .sunday-service-box{
+    padding: 1em 0em;
+    margin: 5em 5em;
+    border: solid;
+    border-width: 1px 1px;
+  }
+  
+  .main-pastor{
+    height: 600px;
+  }
+
+  .about-pastors{
+    z-index:1;
+    color: white;
+    font-size: 25px;
+    top: 10%;
+    left: 5%;
+    position: absolute;
+  }
+
+  /*Inner Healing*/
+  .inner-header{
+    margin-top: 100px;
+    font-size: 30px;
+  }
+  
+  .inner-sentence{
+    font-size:20px;
+    line-height: 20px;
+  }
+  
+  .biblical-header{
+    margin-top: 100px;
+    font-size: 30px;
+  }
+  
+  .biblical-sentence{
+    font-size:20px;
+    line-height: 20px;
+  }
+  
+  .biblical-sentence2{
+    font-size:20px;
+    line-height: 20px;
+  }
+  
+  .biblical-sentence3{
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  
+  .biblical-sentence4{
+    font-size:20px;
+    margin-bottom: 80px;
+  }
+  
+   /* About Us */
+  
+  
+  .church-desc-button{
+    margin-top: -130px;
+  }
+
+  /*Intercessory Prayer*/
+
+  .int-text{
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+  
+  .int-line{
+    width: 700px;
+  }
+  
+  .int-b{
+    margin-top: 50px;
+    margin-left: 80px;
+    margin-right: 60px;
+    margin-bottom: 50px;
+  }
+  
+  .int-title{
+    font-size: 25px;
+  }
+  
+  .int-body{
+    font-size: 20px;
+    line-height: 35px;
+  }
+
+  /* leadership */
+
+  .leadership{
+    width: 90%;
+    margin-top: 100px;
+    margin-bottom: 180px;
+  }
+  
+  .pastors{
+    width: 30%;
+    margin: 20px;
+    box-sizing: border-box;
+  }
+  
+  .reverends{
+    flex: 1;
+    width: 30%;
+    margin: 20px;
+    box-sizing: border-box;
+  }
+  
+  .ministers{
+    flex: 1;
+    width: 30%;
+    margin: 20px;
+    box-sizing: border-box;
+  }
+
+  .l-divider{
+    width: 300px;
+    margin:auto;
+  }
+
+} 
+
+/* Mobile L:768px ~ P:786px*/ 
+@media all and (max-width:767px) {
+
+  #logo{
+    position:absolute;
+    margin-left: 0px;
+    width: 100%;
+    max-width: 800px;
+    float: left;
+    margin-top:8px;
+  }
+
+  .top-bar__menu-box > ul >li{
+    display: inline-block;
+    position: relative;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 0;
+  }
+  
+  .top-bar__menu-box > ul > li > a{
+    font-size: 1rem;
+    padding: 10px 5px;
+    border: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* slide bar */
+  .slider{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background: white;
+    overflow:hidden;
+    max-width: 100%;
+    height: 400px;
+    margin-left:0;
+    margin-bottom: 80px;
+  }
+
+
+  .prev, .next{
+    top: 25%;
+    transform: translate(0, -50%);
+    font-size: 30px;
+    padding: 20px;
+    cursor: pointer;
+    color: #95989b;
+    transition: 0.1s;
+    user-select: none;
+  }
+  
+  .description{
+    /* font position */
+    top: 330px;
+  }
+
+  .description-header
+  {
+  font-size: 15px;
+  text-align: left;
+  font-family: 'roboto'
+  }
+
+  .description-inline
+  {
+    font-size: 8px;
+    text-align: left;
+    font-family: 'roboto';
+  }
+
+  
+  
+  .sunday-service{
+    display:flexbox;
+    color:#95989b;
+    font-family: 'roboto';
+    text-align: center;
+    width:300px;
+    font-size: 15px;
+  }
+  
+  .sunday-service2{
+    font-weight: bold;
+    font-size: 25px;
+    line-height:2;
+  }
+  .sunday-service3{
+    font-size: 15px;
+  }
+
+  .sunday-service4{
+    text-decoration: underline;
+  }
+  
+  .sunday-service-button{
+    margin:2em 1em 1em 1em;
+    background-color: white;
+    border-radius: 40px;
+    border-color: #95989b;
+    padding: 0.3em 2em;
+    font-size:15px;
+    color:#95989b;
+    transition: 0.3s ease-in-out;
+    border-style: solid;
+  }
+  
+  .sunday-service-box{
+    padding: 1em 0em;
+    border: solid;
+    border-width: 1px 1px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+  }
+  .footer-header{
+    font-size: 20px;
+    font-weight: 800;
+    color: #686a6b;
+    font-family: 'roboto';
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .footer-body{
+    margin-left: 20px;
+    color: #686a6b;
+    font-family: 'roboto';
+    font-size: 15px;
+  }
+  
+  .main-pastor{
+    display: flex;
+    position: relative;
+    margin-bottom: 0;
+    height: 200px;
+  }
+  .about-pastors{
+    z-index:1;
+    color: white;
+    font-size: 10px;
+    top: 10%;
+    left: 5%;
+    position: absolute;
+  }
+
+  .pastor-button{
+    margin-top: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius:20px;
+    border-color: white;
+    font-size:10px;
+    color: white;
+    padding: 4px 8px;
+  }
+
+  .top-title{
+    top: 55%;
+    text-align: center;
+    font-size: 35px;
+  }
+
+  /*Inner Healing*/
+  .inner-header{
+    margin-top: 60px;
+    font-size: 25px;
+  }
+  
+  .inner-sentence{
+    font-size:15px;
+    line-height: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  .biblical-header{
+    margin-top: 60px;
+    font-size: 25px;
+  }
+  
+  .biblical-sentence{
+    font-size:15px;
+    line-height: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  .biblical-sentence2{
+    font-size:15px;
+    line-height: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  .biblical-sentence3{
+    font-size:15px;
+    line-height: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  .biblical-sentence4{
+    font-size:15px;
+    margin-bottom: 40px;
+    line-height: 15px;
+  }
+
+  /* About Us */
+  .network-1{
+    margin-top: 60px;
+    font-size: 25px;
+  }
+  
+  .network-2{
+    font-size:13px;
+  }
+  
+  .network-3{
+    margin-top: 20px;
+    font-size:15px;
+    text-align: center;
+    color: #5a5a5a;
+  }
+  
+  .network-line{
+    width: 120px;
+    margin: auto;
+  }
+  
+  .network-button{
+    border-radius: 30px;
+    padding: 5px 15px;
+    margin-top: 50px;
+    font-size: 15px;
+  }
+  
+  .church-title{
+    font-size: 25px;
+    margin-top: 130px;
+  }
+  
+  .church-desc1{
+    margin-top: 20px;
+    font-size: 15px;
+  }
+  
+  .church-desc2{
+    margin-top: 20px;
+    font-size: 15px;
+  }
+  
+  .church-desc3{
+    margin-top: 20px;
+    font-size: 15px;
+  }
+  
+  .church-desc4{
+    margin-top: 20px;
+    font-size: 15px;
+  }
+  
+  .church-desc5{
+    margin-top: 20px;
+    font-size: 15px;
+    margin-bottom: 100px;
+  }
+  
+  .church-desc-button{
+    border-radius: 30px;
+    padding: 5px 15px;
+    margin-top: -50px;
+    font-size: 15px;
+  }
+
+  /* Our Covering */
+  .eacm{
+    position: relative;
+  }
+  
+  .eacm-1{
+    top: 20%;
+    font-size: 30px;
+  }
+  
+  .eacm-2{
+    font-family: 'times new roman';
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  .eacm-button{
+    padding: 10px 30px;
+    bottom: -10%;
+  }
+  
+  .sim-button{
+    bottom: -10%;
+    padding: 10px 30px;
+  }
+  
+  .so-button{
+    padding: 10px 30px;
+    bottom: -10%;
+  }
+
+    /*Intercessory Prayer*/
+
+    .int-text{
+      margin-left: 40px;
+      margin-right: 40px;
+      font-size: 15px;
+    }
+    
+    .int-line{
+      width: 300px;
+    }
+    
+    .int-b{
+      margin-top: 50px;
+      margin-left: 80px;
+      margin-right: 60px;
+      margin-bottom: 50px;
+    }
+    
+    .int-title{
+      font-size: 20px;
+    }
+    
+    .int-body{
+      font-size: 15px;
+      line-height: 20px;
+    }
+    
+    .footer-header{
+      font-size: 20px;
+      margin-left: 60px;
+    }
+    
+    .footer-body{
+      margin-left: 60px;
+      margin-right: 10px;
+    }
+
+    /* 3-contact us */
+    .contact{
+      width: 70vw;
+      height: 40vh;
+    }
+
+    .form h1{
+      font: 500 1.5rem sans-serif;
+      padding: 0.2rem;
+      padding-left: .5rem;
+    }
+
+    .form form{
+      padding: 0.2rem;
+      padding-left: 0.5rem;
+    }
+
+    .form input, .form textarea{
+      width: 80%;
+      padding: .5rem;
+      font-size:.8rem;
+    }
+
+    .form button{
+      padding: .5rem 1rem;
+      font-size: .8rem;
+    }
+
+     /* leadership */
+
+     .leadership{
+      margin-top: 30px;
+      margin-bottom: 70px;
+      width: 30%;
+      display: block;
+    }
+
+    .leadership img{
+      width: 100%;
+      height: 150px;
+      margin:auto;
+    }
+
+    .staffs{
+      font-size: 25px;
+      text-align: center;
+      margin: auto;
+      margin-top: 60px;
+    }
+    
+    .pastors{
+      display: inline-block;
+      position:relative;
+      margin:auto;
+      justify-content: center;
+    }
+    
+    .reverends{
+      display: inline-block;
+      position:relative;
+      margin:auto;
+      justify-content: center;
+    }
+    
+    .ministers{
+      display: inline-block;
+      position:relative;
+      margin:auto;
+      justify-content: center;
+    }
+  
+    .l-divider{
+      width: 200px;
+      margin:auto;
+      margin-top: 10px;
+      margin-bottom: 50px;
+    }
+
+    .leadership-p{
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+} 
+

@@ -1,0 +1,38 @@
+/* plan a visit */
+:root{
+  --primary: white;
+  --secondary: rgb(169, 186, 157);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.top-box{
+  position: relative;
+  display: block;
+}
+
+.top-title{
+  font-family: 'times new roman';
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.contact{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  width: 75vw;
+}
